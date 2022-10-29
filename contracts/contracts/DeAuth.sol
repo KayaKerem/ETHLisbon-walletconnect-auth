@@ -80,6 +80,62 @@ contract DeAuth {
         emit Disconnect(msg.sender, block.timestamp, socialMedia, walletApp);
     }
 
+    //This function provides us to new salt for new password
+    function changeSocialMediaPassword(
+        string memory socialMedia,
+        string memory walletApp
+    ) public {
+        require(
+            checkAValueExistInList(
+                socialMedia,
+                ConnectedSocialMedias[msg.sender][walletApp]
+            ),
+            "Social media is not connected to DeAuth"
+        );
+        uint256 index = indexOfValue(
+            socialMedia,
+            ConnectedSocialMedias[msg.sender][walletApp]
+        );
+        currentSaltValues[msg.sender][walletApp][index] = block.timestamp;
+        emit changePassword(
+            msg.sender,
+            block.timestamp,
+            socialMedia,
+            walletApp
+        );
+    }
+
+    //This function provides us to move our social media connection old wallet address to new wallet address
+    function changeWalletAddressForSpesificSocialMedia(
+        string memory socialMedia,
+        string memory walletApp,
+        address newWalletAddress
+    ) public {
+        require(
+            checkAValueExistInList(
+                socialMedia,
+                ConnectedSocialMedias[msg.sender][walletApp]
+            ),
+            "Social media is not connected to DeAuth"
+        );
+        uint256 index = indexOfValue(
+            socialMedia,
+            ConnectedSocialMedias[msg.sender][walletApp]
+        );
+        remove(index, ConnectedSocialMedias[msg.sender][walletApp]);
+        removeForUint(index, currentSaltValues[msg.sender][walletApp]); //
+
+        ConnectedSocialMedias[newWalletAddress][walletApp].push(socialMedia);
+        currentSaltValues[newWalletAddress][walletApp].push(block.timestamp); //
+        emit MoveConnectedSocialMediaToNewWallet(
+            msg.sender,
+            newWalletAddress,
+            block.timestamp,
+            socialMedia,
+            walletApp
+        );
+    }
+
     //Removing the value in a list(string) that exist the value
     function remove(uint256 index, string[] storage list) private {
         for (uint256 i = index; i < list.length - 1; i++) {
