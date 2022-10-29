@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-// Uncomment this line to use console.log
-import "hardhat/console.sol";
-
 contract DeAuth {
     event AddNewPassword(
         address indexed from,
@@ -38,6 +35,50 @@ contract DeAuth {
     mapping(address => mapping(string => uint256[])) currentSaltValues;
 
     constructor() {}
+
+    //This function provides us to connecting a new social media account with our wallet
+    function connectNewSocialMedia(
+        string memory socialMedia,
+        string memory walletApp
+    ) public {
+        require(
+            !checkAValueExistInList(
+                socialMedia,
+                ConnectedSocialMedias[msg.sender][walletApp]
+            ),
+            "Social media already connected to DeAuth"
+        );
+        ConnectedSocialMedias[msg.sender][walletApp].push(socialMedia);
+        currentSaltValues[msg.sender][walletApp].push(block.timestamp); //
+        emit AddNewPassword(
+            msg.sender,
+            block.timestamp,
+            socialMedia,
+            walletApp
+        );
+    }
+
+    //This function provides us to disconnecting a social media account that already connected to deAuth
+    function disconnectSocialMedia(
+        string memory socialMedia,
+        string memory walletApp
+    ) public {
+        require(
+            checkAValueExistInList(
+                socialMedia,
+                ConnectedSocialMedias[msg.sender][walletApp]
+            ),
+            "Social media is not connected to DeAuth"
+        );
+        uint256 index = indexOfValue(
+            socialMedia,
+            ConnectedSocialMedias[msg.sender][walletApp]
+        );
+        remove(index, ConnectedSocialMedias[msg.sender][walletApp]);
+        removeForUint(index, currentSaltValues[msg.sender][walletApp]); //
+
+        emit Disconnect(msg.sender, block.timestamp, socialMedia, walletApp);
+    }
 
     //Removing the value in a list(string) that exist the value
     function remove(uint256 index, string[] storage list) private {
