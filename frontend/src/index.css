@@ -10,3 +10,15 @@
     @apply h-full bg-blackBg
   }
 }
+
+.btn-menu {
+  @apply hover:bg-gray-700 text-white border-white border-2 h-[44px]
+}
+
+.logos-footer {
+  @apply h-[36px] w-[36px]
+}
+
+.btn-homebox {
+  @apply h-[129px] font-normal text-3xl w-[369px] rounded-[30px] border-white border-2 row-span-1 text-white
+}
