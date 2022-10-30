@@ -774,31 +774,31 @@
   "resolved" "https://registry.npmjs.org/@nomicfoundation/hardhat-toolbox/-/hardhat-toolbox-2.0.0.tgz"
   "version" "2.0.0"
 
-"@nomicfoundation/solidity-analyzer-linux-x64-gnu@0.0.3":
-  "integrity" "sha512-uRfVDlxtwT1vIy7MAExWAkRD4r9M79zMG7S09mCrWUn58DbLs7UFl+dZXBX0/8FTGYWHhOT/1Etw1ZpAf5DTrg=="
-  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-gnu/-/solidity-analyzer-linux-x64-gnu-0.0.3.tgz"
-  "version" "0.0.3"
+"@nomicfoundation/solidity-analyzer-linux-x64-gnu@0.1.0":
+  "integrity" "sha512-lR0AxK1x/MeKQ/3Pt923kPvwigmGX3OxeU5qNtQ9pj9iucgk4PzhbS3ruUeSpYhUxG50jN4RkIGwUMoev5lguw=="
+  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-gnu/-/solidity-analyzer-linux-x64-gnu-0.1.0.tgz"
+  "version" "0.1.0"
 
-"@nomicfoundation/solidity-analyzer-linux-x64-musl@0.0.3":
-  "integrity" "sha512-8HPwYdLbhcPpSwsE0yiU/aZkXV43vlXT2ycH+XlOjWOnLfH8C41z0njK8DHRtEFnp4OVN6E7E5lHBBKDZXCliA=="
-  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-musl/-/solidity-analyzer-linux-x64-musl-0.0.3.tgz"
-  "version" "0.0.3"
+"@nomicfoundation/solidity-analyzer-linux-x64-musl@0.1.0":
+  "integrity" "sha512-A1he/8gy/JeBD3FKvmI6WUJrGrI5uWJNr5Xb9WdV+DK0F8msuOqpEByLlnTdLkXMwW7nSl3awvLezOs9xBHJEg=="
+  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer-linux-x64-musl/-/solidity-analyzer-linux-x64-musl-0.1.0.tgz"
+  "version" "0.1.0"
 
-"@nomicfoundation/solidity-analyzer@^0.0.3":
-  "integrity" "sha512-VFMiOQvsw7nx5bFmrmVp2Q9rhIjw2AFST4DYvWVVO9PMHPE23BY2+kyfrQ4J3xCMFC8fcBbGLt7l4q7m1SlTqg=="
-  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer/-/solidity-analyzer-0.0.3.tgz"
-  "version" "0.0.3"
+"@nomicfoundation/solidity-analyzer@^0.1.0":
+  "integrity" "sha512-xGWAiVCGOycvGiP/qrlf9f9eOn7fpNbyJygcB0P21a1MDuVPlKt0Srp7rvtBEutYQ48ouYnRXm33zlRnlTOPHg=="
+  "resolved" "https://registry.npmjs.org/@nomicfoundation/solidity-analyzer/-/solidity-analyzer-0.1.0.tgz"
+  "version" "0.1.0"
   optionalDependencies:
-    "@nomicfoundation/solidity-analyzer-darwin-arm64" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-darwin-x64" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-freebsd-x64" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-linux-arm64-gnu" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-linux-arm64-musl" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-linux-x64-gnu" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-linux-x64-musl" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-win32-arm64-msvc" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-win32-ia32-msvc" "0.0.3"
-    "@nomicfoundation/solidity-analyzer-win32-x64-msvc" "0.0.3"
+    "@nomicfoundation/solidity-analyzer-darwin-arm64" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-darwin-x64" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-freebsd-x64" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-linux-arm64-gnu" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-linux-arm64-musl" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-linux-x64-gnu" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-linux-x64-musl" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-win32-arm64-msvc" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-win32-ia32-msvc" "0.1.0"
+    "@nomicfoundation/solidity-analyzer-win32-x64-msvc" "0.1.0"
 
 "@nomiclabs/hardhat-ethers@^2.0.0", "@nomiclabs/hardhat-ethers@^2.1.1":
   "integrity" "sha512-Gg0IFkT/DW3vOpih4/kMjeZCLYqtfgECLeLXTs7ZDPzcK0cfoc5wKk4nq5n/izCUzdhidO/Utd6ptF9JrWwWVA=="
@@ -4523,10 +4523,10 @@
     "eth-gas-reporter" "^0.2.25"
     "sha1" "^1.1.1"
 
-"hardhat@^2.0.0", "hardhat@^2.0.2", "hardhat@^2.0.4", "hardhat@^2.11.0", "hardhat@^2.11.2", "hardhat@^2.9.4", "hardhat@^2.9.5", "hardhat@^2.9.9":
-  "integrity" "sha512-BdsXC1CFJQDJKmAgCwpmGhFuVU6dcqlgMgT0Kg/xmFAFVugkpYu6NRmh4AaJ3Fah0/BR9DOR4XgQGIbg4eon/Q=="
-  "resolved" "https://registry.npmjs.org/hardhat/-/hardhat-2.11.2.tgz"
-  "version" "2.11.2"
+"hardhat@^2.0.0", "hardhat@^2.0.2", "hardhat@^2.0.4", "hardhat@^2.11.0", "hardhat@^2.12.1", "hardhat@^2.9.4", "hardhat@^2.9.5", "hardhat@^2.9.9":
+  "integrity" "sha512-ihqYoaAKMceVWRcc3VddftFM7Q4/WL5Xan8nrklfDRwwST0W1rWWEE8SrxGikW58IJdREsC/HXVHs0zKfYpiCA=="
+  "resolved" "https://registry.npmjs.org/hardhat/-/hardhat-2.12.1.tgz"
+  "version" "2.12.1"
   dependencies:
     "@ethersproject/abi" "^5.1.2"
     "@metamask/eth-sig-util" "^4.0.0"
@@ -4540,7 +4540,7 @@
     "@nomicfoundation/ethereumjs-tx" "^4.0.0"
     "@nomicfoundation/ethereumjs-util" "^8.0.0"
     "@nomicfoundation/ethereumjs-vm" "^6.0.0"
-    "@nomicfoundation/solidity-analyzer" "^0.0.3"
+    "@nomicfoundation/solidity-analyzer" "^0.1.0"
     "@sentry/node" "^5.18.1"
     "@types/bn.js" "^5.1.0"
     "@types/lru-cache" "^5.1.0"

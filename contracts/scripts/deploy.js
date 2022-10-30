@@ -8,7 +8,10 @@ const hre = require("hardhat");
 
 async function main() {
     //Get the contract deploy
-
+    const DeAuth = await hre.ethers.getContractFactory("DeAuth");
+    const deAuth = await DeAuth.deploy();
+    await deAuth.deployed();
+    console.log("DeAuth deployed to ",deAuth.address);
 
 }
 

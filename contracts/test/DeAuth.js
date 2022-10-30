@@ -41,13 +41,13 @@ describe("Lock Contract",function(){
 
     it("Move our social media one wallet address to another",async function(){
         const currentSocialMediasUser1 = (await deAuth.connect(user1).getConnectedSocialMedias("metamask"));
-        await deAuth.connect(user1).changeSocialMediaPassword("instagram","metamask",user1New.address);
+        await deAuth.connect(user1).changeWalletAddressForSpesificSocialMedia("instagram","metamask",user1New.address);
         expect((await deAuth.connect(user1).getConnectedSocialMedias("metamask")).length).to.be.equal(currentSocialMediasUser1.length-1);
         expect((await deAuth.connect(user1).getConnectedSocialMedias("metamask")).includes("instagram")).to.be.equal(false);
         expect((await deAuth.connect(user1New).getConnectedSocialMedias("metamask")).includes("instagram")).to.be.equal(true);   
 
         const currentSocialMediasUser2 = (await deAuth.connect(user2).getConnectedSocialMedias("metamask"));
-        await deAuth.connect(user2).changeSocialMediaPassword("reddit","metamask",user2New.address);
+        await deAuth.connect(user2).changeWalletAddressForSpesificSocialMedia("reddit","metamask",user2New.address);
         expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).length).to.be.equal(currentSocialMediasUser2.length-1);
         expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).includes("reddit")).to.be.equal(false);
         expect((await deAuth.connect(user2New).getConnectedSocialMedias("metamask")).includes("reddit")).to.be.equal(true);   
@@ -64,7 +64,18 @@ describe("Lock Contract",function(){
         expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).length).to.be.equal(currentSocialMediasUser2.length-1);
         expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).includes("twitter")).to.be.equal(false);
     });
-    
+    // it("Change password salt for spesific social media",async function(){
+    //     const currentSocialMediasUser1 = (await deAuth.connect(user1).getConnectedSocialMedias("metamask"));
+    //     await deAuth.connect(user1).disconnectSocialMedia("facebook","metamask");
+    //     expect((await deAuth.connect(user1).getConnectedSocialMedias("metamask")).length).to.be.equal(currentSocialMediasUser1.length-1);
+    //     expect((await deAuth.connect(user1).getConnectedSocialMedias("metamask")).includes("facebook")).to.be.equal(false);
+
+    //     const currentSocialMediasUser2 = (await deAuth.connect(user2).getConnectedSocialMedias("metamask"));
+    //     await deAuth.connect(user2).disconnectSocialMedia("twitter","metamask");
+    //     expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).length).to.be.equal(currentSocialMediasUser2.length-1);
+    //     expect((await deAuth.connect(user2).getConnectedSocialMedias("metamask")).includes("twitter")).to.be.equal(false);
+    // });
+
 
 
 })
