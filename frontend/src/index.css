@@ -20,5 +20,5 @@
 }
 
 .btn-homebox {
-  @apply h-[129px] font-normal text-3xl w-[369px] rounded-[30px] border-white border-2 row-span-1 text-white
+  @apply h-[129px] font-normal text-3xl w-[369px] rounded-[30px] border-white border-2 row-span-1 text-white focus:h-[190px] active:h-[190px]
 }

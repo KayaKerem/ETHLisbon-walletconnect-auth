@@ -11,8 +11,6 @@ export const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
   const disconnect = useDisconnect();
 
-  console.log(isMenu);
-
   useEffect(() => {
     if (account.isConnected) {
       setIsCn(true);

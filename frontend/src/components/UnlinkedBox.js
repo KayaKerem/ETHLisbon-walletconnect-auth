@@ -6,8 +6,8 @@ export const UnlinkedBox = () => {
     "telegram",
     "telegram",
     "telegram",
-    "telegram",
-    "telegram",
+    "gmail",
+    "netflix",
   ];
 
   return (
